@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-nunito bg-[#F5EDD8] overflow-x-hidden cursor-default;
+  }
+}
+
+/* Brick wall mortar overlay - use in components via className */
+.brick-mortar {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 13px,
+    rgba(180, 140, 90, 0.12) 13px,
+    rgba(180, 140, 90, 0.12) 15px
+  );
+}
