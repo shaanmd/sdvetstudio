@@ -13,19 +13,17 @@ export async function POST(req: Request) {
     )
   }
   try {
-    const { name, email, business, service, project, referral } = await req.json()
+    const { name, email, message } = await req.json()
 
     await resend.emails.send({
       from: 'SD Vet Studio <hello@sdvetstudio.com>',
       to: ['hello@sdvetstudio.com'],
-      subject: `New project brief from ${name}`,
+      subject: `New message from ${name} via SD VetStudio`,
       html: `
-        <h2>New brief from ${name}</h2>
-        <p><strong>Business:</strong> ${business || '—'}</p>
+        <h2>New message from ${name}</h2>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Service:</strong> ${service || '—'}</p>
-        <p><strong>Project:</strong> ${project || '—'}</p>
-        <p><strong>Referral:</strong> ${referral || 'Not specified'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     })
 

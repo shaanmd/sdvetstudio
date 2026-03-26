@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --vet-primary:   #2E6B5E;
+    --vet-secondary: #F5A25D;
+    --vet-bg:        #F9F5EF;
+    --vet-surface:   #FFFFFF;
+    --vet-text:      #1C2B28;
+    --vet-muted:     #7A9490;
+    --vet-border:    #D8E6E3;
+    --vet-accent:    #E8C49A;
+    --vet-footer:    #1C2B28;
+  }
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply font-nunito bg-[#F5EDD8] overflow-x-hidden cursor-default;
+    @apply font-dmsans bg-vet-bg text-vet-text overflow-x-hidden cursor-default;
   }
-}
-
-/* Brick wall mortar overlay - use in components via className */
-.brick-mortar {
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 13px,
-    rgba(180, 140, 90, 0.12) 13px,
-    rgba(180, 140, 90, 0.12) 15px
-  );
 }

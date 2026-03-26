@@ -1,27 +1,24 @@
 import type { Metadata } from 'next'
-import { Luckiest_Guy, Nunito, Permanent_Marker } from 'next/font/google'
+import { Playfair_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const luckiestGuy = Luckiest_Guy({
-  weight: '400',
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-luckiest-guy',
+  weight: ['700'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
 })
-const nunito = Nunito({
+
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-  variable: '--font-nunito',
-})
-const permanentMarker = Permanent_Marker({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-permanent-marker',
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-dm-sans',
 })
 
 export const metadata: Metadata = {
-  title: 'SD Vet Studio — Websites & Web Apps for the Busy Vet',
+  title: 'SD VetStudio — Two veterinarians. Building things.',
   description:
-    'AI-assisted builds. Clean handovers. No tech overwhelm. No agency price tag. Built by vets, for vets.',
+    'AI education, clinical tools, and web apps for the veterinary world. Built by Dr Shaan Mocke and Dr Deb Prattley.',
 }
 
 export default function RootLayout({
@@ -32,9 +29,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${luckiestGuy.variable} ${nunito.variable} ${permanentMarker.variable}`}
+      className={`${playfairDisplay.variable} ${dmSans.variable}`}
     >
-      <body className={nunito.className}>{children}</body>
+      <body className={dmSans.className}>{children}</body>
     </html>
   )
 }
