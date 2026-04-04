@@ -26,12 +26,16 @@ export function Nav() {
         >
           SD VetStudio
         </a>
-        <a
-          href="#contact"
-          className="font-dmsans font-medium text-sm px-4 py-2 rounded-full border border-vet-primary text-vet-primary transition-colors hover:bg-vet-primary hover:text-white"
-        >
-          Get in touch
-        </a>
+        <div className="flex items-center gap-6">
+          <a href="#projects" className="hidden md:inline font-dmsans text-sm text-vet-muted hover:text-vet-primary transition-colors">Projects</a>
+          <a href="#about" className="hidden md:inline font-dmsans text-sm text-vet-muted hover:text-vet-primary transition-colors">About</a>
+          <a
+            href="#contact"
+            className="font-dmsans font-medium text-sm px-4 py-2 rounded-full border border-vet-primary text-vet-primary transition-colors hover:bg-vet-primary hover:text-white"
+          >
+            Work with us
+          </a>
+        </div>
       </div>
     </nav>
   )

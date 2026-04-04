@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 
@@ -16,10 +17,35 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'SD VetStudio — Two veterinarians. Building things.',
+  metadataBase: new URL('https://sdvetstudio.com'),
+  title: 'SD VetStudio — Software, apps, and things for screens.',
   description:
-    'AI education, clinical tools, and web apps for the veterinary world. Built by Dr Shaan Mocke and Dr Deb Prattley.',
+    'Custom AI builds and educational tools. Created by two veterinarians with a focus on functional, no-nonsense design and a fragment of fun.',
+  openGraph: {
+    title: 'SD VetStudio — Software, apps, and things for screens.',
+    description:
+      'Custom AI builds and educational tools. Created by two veterinarians with a focus on functional, no-nonsense design and a fragment of fun.',
+    url: 'https://sdvetstudio.com',
+    siteName: 'SD VetStudio',
+    locale: 'en_NZ',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SD VetStudio — Software, apps, and things for screens.',
+    description:
+      'Custom AI builds and educational tools. Created by two veterinarians with a focus on functional, no-nonsense design and a fragment of fun.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://sdvetstudio.com',
+  },
 }
+
+const GA_ID = 'G-75JFHKHXWP'
 
 export default function RootLayout({
   children,
@@ -31,6 +57,20 @@ export default function RootLayout({
       lang="en"
       className={`${playfairDisplay.variable} ${dmSans.variable}`}
     >
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body className={dmSans.className}>{children}</body>
     </html>
   )

@@ -4,16 +4,10 @@ import { motion } from 'framer-motion'
 
 const updates = [
   {
-    icon: '🏆',
-    title: 'RadinCon Buildathon',
-    description: 'Competed at the NZ radiology hackathon.',
+    icon: '\uD83C\uDFC6',
+    title: 'Hackathon',
+    description: 'We took part in an international AI hackathon. Check out our Project Prioritiser app.',
     date: 'March 2026',
-  },
-  {
-    icon: '🚀',
-    title: 'JetPackers AI workshops',
-    description: 'AI literacy for vet practices — first cohort live.',
-    date: 'February 2026',
   },
 ]
 
@@ -29,7 +23,7 @@ export function Updates() {
     <section id="updates" className="bg-vet-surface py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <p className="font-dmsans font-medium text-xs tracking-widest uppercase text-vet-primary mb-3">
-          Latest
+          Recently
         </p>
         <h2 className="font-playfair font-bold text-vet-text" style={{ fontSize: '2rem' }}>
           What we&apos;ve been up to

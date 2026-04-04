@@ -36,14 +36,17 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 px-6" style={{ backgroundColor: '#2E6B5E' }}>
       <div className="max-w-2xl mx-auto text-center">
+        <p className="font-mono text-xs tracking-widest uppercase mb-3" style={{ color: '#48C9A0' }}>
+          Work with us
+        </p>
         <h2
           className="font-playfair font-bold text-white"
           style={{ fontSize: 'clamp(1.75rem, 4vw, 2.25rem)' }}
         >
-          Want to work with us?
+          Got something brewing?
         </h2>
         <p className="font-dmsans text-white/80 mt-2 max-w-md mx-auto leading-relaxed">
-          We take on a small number of collaborations and commissions. Tell us what you&apos;re thinking.
+          We take on a small number of commissions and collaborations each year. Tell us what you&apos;re cooking up.
         </p>
 
         <div className="mt-10 bg-vet-surface rounded-2xl p-8 text-left">
@@ -56,7 +59,7 @@ export function Contact() {
                 id="contact-name"
                 type="text"
                 name="name"
-                placeholder="Dr Jane Smith"
+                placeholder="e.g. Jane Smith"
                 required
                 className="w-full px-4 py-3 border border-vet-border rounded-xl bg-vet-bg text-vet-text outline-none focus:border-[#2E6B5E] text-sm mb-4 font-dmsans"
               />
@@ -68,13 +71,13 @@ export function Contact() {
                 id="contact-email"
                 type="email"
                 name="email"
-                placeholder="jane@smithvet.com.au"
+                placeholder="jane@yourpractice.com"
                 required
                 className="w-full px-4 py-3 border border-vet-border rounded-xl bg-vet-bg text-vet-text outline-none focus:border-[#2E6B5E] text-sm mb-4 font-dmsans"
               />
 
               <label htmlFor="contact-message" className="font-dmsans font-medium text-sm text-vet-text mb-1 block">
-                Message
+                What are you thinking?
               </label>
               <textarea
                 id="contact-message"

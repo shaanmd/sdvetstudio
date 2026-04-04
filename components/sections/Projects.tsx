@@ -7,26 +7,26 @@ const projects = [
   {
     status: 'live' as const,
     name: 'SynAIpseVet',
-    description: 'AI education platform for veterinary professionals. Built by and for practising vets.',
-    url: 'https://synaipse.vet',
+    description: 'AI education for practising vets. We can show you the ropes so you can make your own stuff, or we can build things for you. We still see furry patients too, so we\u2019ll easily understand what you need.',
+    url: 'https://synaipseVet.com',
+  },
+  {
+    status: 'live' as const,
+    name: 'Jetpackers AI',
+    description: 'AI literacy for Gen X women who want to make their lives easier and keep up with the latest tech, in non-techie terms. (Why Jetpackers? Because when we were kids they promised the 2000s would bring jetpacks. Can\u2019t see any of those flying about, but we\u2019ve got AI and we\u2019ll make the most of it.)',
+    url: 'https://jetpackersai.com',
   },
   {
     status: 'beta' as const,
     name: 'CCL Rehab App',
-    description: '12-week evidence-based recovery program for dogs post cruciate surgery.',
-    url: 'https://ccl.vetalign.com.au',
+    description: '12-week post-cruciate recovery for optimal client support.',
+    url: '',
   },
   {
-    status: 'live' as const,
-    name: 'Senior Dog Mobility',
-    description: 'Lead generation tool with automated email pathways based on mobility score.',
-    url: '', // TODO: add URL when live
-  },
-  {
-    status: 'in-progress' as const,
-    name: 'JetPackers AI',
-    description: 'AI literacy workshops and resources for veterinary practices.',
-    url: 'https://jetpackers.ai',
+    status: 'beta' as const,
+    name: '6-Week Senior Dog Mobility Programme',
+    description: 'Empowering clinics and clients to create a better life for our golden oldies.',
+    url: '',
   },
 ]
 
@@ -35,11 +35,14 @@ export function Projects() {
     <section id="projects" className="bg-vet-bg py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <p className="font-dmsans font-medium text-xs tracking-widest uppercase text-vet-primary mb-3">
-          Projects
+          What we&apos;ve created
         </p>
         <h2 className="font-playfair font-bold text-vet-text" style={{ fontSize: '2rem' }}>
-          What we&apos;ve shipped
+          Projects
         </h2>
+        <p className="font-dmsans text-vet-muted text-sm mt-2">
+          A mix of vet tools, AI education, and things that we needed to exist.
+        </p>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
