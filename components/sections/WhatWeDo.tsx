@@ -1,9 +1,26 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+
+const slides = [
+  { src: '/images/projects/synaipsevet.png', alt: 'SynAIpseVet — AI education for vets' },
+  { src: '/images/projects/jetpackers.png', alt: 'Jetpackers AI — AI literacy for Gen X women' },
+  { src: '/images/projects/ccl-rehab.png', alt: 'CCL Rehab App — post-cruciate recovery' },
+  { src: '/images/projects/senior-dog.png', alt: 'Senior Dog Mobility Programme' },
+]
 
 export function WhatWeDo() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section className="bg-vet-surface py-20 px-6">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -27,20 +44,41 @@ export function WhatWeDo() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          <Image
-            src="/images/projects_collage.png"
-            alt="A collage of SD VetStudio projects"
-            width={600}
-            height={400}
-            className="w-full h-auto rounded-xl"
-          />
-        </motion.div>
+        <div className="relative aspect-[3/2] rounded-xl overflow-hidden bg-vet-bg border border-vet-border">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={slides[current].src}
+                alt={slides[current].alt}
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Dots */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className="w-2 h-2 rounded-full transition-all"
+                style={{
+                  backgroundColor: i === current ? '#2E6B5E' : 'rgba(255,255,255,0.6)',
+                  transform: i === current ? 'scale(1.3)' : 'scale(1)',
+                }}
+                aria-label={`Show slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -11,14 +11,14 @@ const founders = [
     photo: '/images/shaan.jpg',
     initials: 'SM',
     bio: 'Shaan was a web designer and teacher of coding in a previous life. Now she\u2019s an avid AI user (as well as a vet!) who can whip up cool apps in a blink.',
-    linkedin: '#', // TODO: replace with real URL
+    linkedin: 'https://www.linkedin.com/in/shaanmocke/',
   },
   {
     name: 'Dr Deb Prattley',
     photo: '/images/deb.jpg',
     initials: 'DP',
     bio: 'Deb (also a vet) learned coding basics at the turn of the century and is more tech friendly than tech pro, but she tries out all the tools to find out just how much a normal person can do.',
-    linkedin: '#', // TODO: replace with real URL
+    linkedin: 'https://www.linkedin.com/in/debbieprattley/',
   },
 ]
 
