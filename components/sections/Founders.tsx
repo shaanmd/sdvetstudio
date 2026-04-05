@@ -29,7 +29,7 @@ function Avatar({ photo, initials, name }: { photo: string; initials: string; na
     return (
       <div
         className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-full flex items-center justify-center flex-shrink-0 border-3 font-dmsans font-semibold text-2xl"
-        style={{ backgroundColor: '#E8C49A', borderColor: '#2E6B5E', color: '#1C2B28' }}
+        style={{ backgroundColor: '#C0DDD6', borderColor: '#1A3A5C', color: '#0D2035' }}
       >
         {initials}
       </div>
@@ -39,7 +39,7 @@ function Avatar({ photo, initials, name }: { photo: string; initials: string; na
   return (
     <div
       className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-full overflow-hidden flex-shrink-0 border-3"
-      style={{ borderColor: '#D8E6E3' }}
+      style={{ borderColor: '#C0DDD6' }}
     >
       <Image
         src={photo}

@@ -30,10 +30,10 @@ const fadeInUp = {
 
 export function Problem() {
   return (
-    <section className="py-20 px-6 text-white" style={{ backgroundColor: '#1C2B28' }}>
+    <section className="py-20 px-6 text-white" style={{ backgroundColor: '#1A3A5C' }}>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div {...fadeInUp}>
-          <p className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: '#F5A25D' }}>
+          <p className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: '#48C9A0' }}>
             Sound familiar?
           </p>
           <h2

@@ -17,7 +17,7 @@ export function FoundersHero() {
         <a
           href="#projects"
           className="inline-flex items-center gap-2 mt-7 px-8 py-3.5 rounded-xl font-dmsans font-semibold text-sm text-white transition-all hover:-translate-y-0.5"
-          style={{ backgroundColor: '#1C2B28' }}
+          style={{ backgroundColor: '#1A3A5C' }}
         >
           See what we&apos;ve built
         </a>

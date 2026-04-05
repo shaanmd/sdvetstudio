@@ -71,7 +71,7 @@ export function WhatWeDo() {
                 onClick={() => setCurrent(i)}
                 className="w-2 h-2 rounded-full transition-all"
                 style={{
-                  backgroundColor: i === current ? '#2E6B5E' : 'rgba(255,255,255,0.6)',
+                  backgroundColor: i === current ? '#1A3A5C' : 'rgba(255,255,255,0.6)',
                   transform: i === current ? 'scale(1.3)' : 'scale(1)',
                 }}
                 aria-label={`Show slide ${i + 1}`}

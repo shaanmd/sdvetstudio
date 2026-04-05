@@ -9,15 +9,15 @@ const config: Config = {
     extend: {
       colors: {
         // Warm Vet theme tokens
-        'vet-primary':   '#2E6B5E',
-        'vet-secondary': '#F5A25D',
-        'vet-bg':        '#F9F5EF',
+        'vet-primary':   '#1A3A5C',
+        'vet-secondary': '#48C9A0',
+        'vet-bg':        '#F0F7F5',
         'vet-surface':   '#FFFFFF',
-        'vet-text':      '#1C2B28',
-        'vet-muted':     '#7A9490',
-        'vet-border':    '#D8E6E3',
-        'vet-accent':    '#E8C49A',
-        'vet-footer':    '#1C2B28',
+        'vet-text':      '#0D2035',
+        'vet-muted':     '#5A8080',
+        'vet-border':    '#C0DDD6',
+        'vet-accent':    '#FF6B6B',
+        'vet-footer':    '#0D2035',
         // Legacy store tokens (kept for archive components)
         'store-blue': '#1B50D4',
         'store-blue-dark': '#0F3099',

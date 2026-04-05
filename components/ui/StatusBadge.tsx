@@ -1,9 +1,9 @@
 type Status = 'live' | 'beta' | 'in-progress'
 
 const styles: Record<Status, { bg: string; color: string; label: string }> = {
-  live: { bg: '#EAF5F2', color: '#2E6B5E', label: 'LIVE' },
+  live: { bg: '#d4f0ee', color: '#1A3A5C', label: 'LIVE' },
   beta: { bg: '#FEF3E2', color: '#B06000', label: 'BETA' },
-  'in-progress': { bg: '#FEF3E2', color: '#B06000', label: 'IN PROGRESS' },
+  'in-progress': { bg: '#F3F0FF', color: '#6B4DFF', label: 'IN PROGRESS' },
 }
 
 export function StatusBadge({ status }: { status: Status }) {

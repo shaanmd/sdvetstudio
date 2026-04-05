@@ -5,7 +5,7 @@ export function SocialPill({ href, label }: { href: string; label: string }) {
     return (
       <span
         className="inline-block font-dmsans font-medium text-sm rounded-full px-3 py-1 border opacity-40 cursor-not-allowed"
-        style={{ backgroundColor: '#EAF5F2', color: '#2E6B5E', borderColor: '#D8E6E3' }}
+        style={{ backgroundColor: '#E8F4F0', color: '#1A3A5C', borderColor: '#C0DDD6' }}
       >
         {label}
       </span>
@@ -18,7 +18,7 @@ export function SocialPill({ href, label }: { href: string; label: string }) {
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block font-dmsans font-medium text-sm rounded-full px-3 py-1 border transition-colors hover:bg-vet-border"
-      style={{ backgroundColor: '#EAF5F2', color: '#2E6B5E', borderColor: '#D8E6E3' }}
+      style={{ backgroundColor: '#E8F4F0', color: '#1A3A5C', borderColor: '#C0DDD6' }}
     >
       {label}
     </a>

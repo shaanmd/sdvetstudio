@@ -34,7 +34,7 @@ export function Updates() {
             <div
               key={u.title}
               className="bg-vet-bg border border-vet-border border-l-4 rounded-xl p-5 flex items-start gap-4"
-              style={{ borderLeftColor: '#F5A25D' }}
+              style={{ borderLeftColor: '#48C9A0' }}
             >
               <span className="text-2xl flex-shrink-0 mt-0.5">{u.icon}</span>
               <div className="flex-1">
