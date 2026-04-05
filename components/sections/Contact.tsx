@@ -34,25 +34,25 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6" style={{ backgroundColor: '#2E6B5E' }}>
-      <div className="max-w-2xl mx-auto text-center">
+    <section id="contact" className="py-20 px-6" style={{ backgroundColor: '#1A3A5C' }}>
+      <div className="max-w-xl mx-auto text-center">
         <p className="font-mono text-xs tracking-widest uppercase mb-3" style={{ color: '#48C9A0' }}>
           Work with us
         </p>
         <h2
-          className="font-playfair font-bold text-white"
-          style={{ fontSize: 'clamp(1.75rem, 4vw, 2.25rem)' }}
+          className="font-playfair font-bold"
+          style={{ fontSize: 'clamp(1.75rem, 4vw, 2.6rem)', color: '#48C9A0' }}
         >
           Got something brewing?
         </h2>
-        <p className="font-dmsans text-white/80 mt-2 max-w-md mx-auto leading-relaxed">
+        <p className="font-dmsans mt-3 max-w-md mx-auto leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
           We take on a small number of commissions and collaborations each year. Tell us what you&apos;re cooking up.
         </p>
 
-        <div className="mt-10 bg-vet-surface rounded-2xl p-8 text-left">
+        <div className="mt-10 text-left">
           {!sent ? (
             <form onSubmit={handleSubmit}>
-              <label htmlFor="contact-name" className="font-dmsans font-medium text-sm text-vet-text mb-1 block">
+              <label htmlFor="contact-name" className="font-dmsans font-medium text-sm mb-1 block" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 Your name
               </label>
               <input
@@ -61,10 +61,11 @@ export function Contact() {
                 name="name"
                 placeholder="e.g. Jane Smith"
                 required
-                className="w-full px-4 py-3 border border-vet-border rounded-xl bg-vet-bg text-vet-text outline-none focus:border-[#2E6B5E] text-sm mb-4 font-dmsans"
+                className="w-full px-4 py-3.5 rounded-xl text-sm mb-5 font-dmsans text-white outline-none placeholder:text-white/30"
+                style={{ backgroundColor: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(255,255,255,0.2)' }}
               />
 
-              <label htmlFor="contact-email" className="font-dmsans font-medium text-sm text-vet-text mb-1 block">
+              <label htmlFor="contact-email" className="font-dmsans font-medium text-sm mb-1 block" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 Email address
               </label>
               <input
@@ -73,38 +74,40 @@ export function Contact() {
                 name="email"
                 placeholder="jane@yourpractice.com"
                 required
-                className="w-full px-4 py-3 border border-vet-border rounded-xl bg-vet-bg text-vet-text outline-none focus:border-[#2E6B5E] text-sm mb-4 font-dmsans"
+                className="w-full px-4 py-3.5 rounded-xl text-sm mb-5 font-dmsans text-white outline-none placeholder:text-white/30"
+                style={{ backgroundColor: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(255,255,255,0.2)' }}
               />
 
-              <label htmlFor="contact-message" className="font-dmsans font-medium text-sm text-vet-text mb-1 block">
+              <label htmlFor="contact-message" className="font-dmsans font-medium text-sm mb-1 block" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 What are you thinking?
               </label>
               <textarea
                 id="contact-message"
                 name="message"
-                placeholder="What are you thinking?"
+                placeholder="Tell us about your idea, problem, or project..."
                 required
                 rows={5}
-                className="w-full px-4 py-3 border border-vet-border rounded-xl bg-vet-bg text-vet-text outline-none focus:border-[#2E6B5E] text-sm mb-4 font-dmsans resize-y"
+                className="w-full px-4 py-3.5 rounded-xl text-sm mb-5 font-dmsans text-white outline-none resize-y placeholder:text-white/30"
+                style={{ backgroundColor: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(255,255,255,0.2)' }}
               />
 
               {error && (
-                <p className="font-dmsans text-sm text-red-600 mb-3">{error}</p>
+                <p className="font-dmsans text-sm text-red-400 mb-3">{error}</p>
               )}
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full font-dmsans font-semibold rounded-full py-3.5 mt-2 transition hover:brightness-105 disabled:opacity-70"
-                style={{ backgroundColor: '#F5A25D', color: '#1C2B28' }}
+                className="font-dmsans font-bold rounded-xl py-3.5 px-8 mt-2 transition hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-70"
+                style={{ backgroundColor: '#48C9A0', color: '#1A3A5C' }}
               >
-                {loading ? 'Sending…' : 'Send it →'}
+                {loading ? 'Sending\u2026' : 'Send it \u2192'}
               </button>
             </form>
           ) : (
             <div className="text-center py-10 px-4">
               <div className="text-4xl mb-3">✅</div>
-              <p className="font-dmsans font-medium text-vet-text">Got it — we&apos;ll be in touch.</p>
+              <p className="font-dmsans font-medium text-white">Got it — we&apos;ll be in touch.</p>
             </div>
           )}
         </div>
