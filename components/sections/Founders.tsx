@@ -8,14 +8,14 @@ import { SocialPill } from '@/components/ui/SocialPill'
 const founders = [
   {
     name: 'Dr Shaan Mocke',
-    photo: '/images/shaan.jpg',
+    photo: '/shaan.jpg',
     initials: 'SM',
     bio: 'Shaan was a web designer and teacher of coding in a previous life. Now she\u2019s an avid AI user (as well as a vet!) who can whip up cool apps in a blink.',
     linkedin: 'https://www.linkedin.com/in/shaanmocke/',
   },
   {
     name: 'Dr Deb Prattley',
-    photo: '/images/deb.jpg',
+    photo: '/deb.jpg',
     initials: 'DP',
     bio: 'Deb (also a vet) learned coding basics at the turn of the century and is more tech friendly than tech pro, but she tries out all the tools to find out just how much a normal person can do.',
     linkedin: 'https://www.linkedin.com/in/debbieprattley/',
@@ -28,7 +28,7 @@ function Avatar({ photo, initials, name }: { photo: string; initials: string; na
   if (imgError) {
     return (
       <div
-        className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 border-2 font-dmsans font-semibold text-xl"
+        className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-full flex items-center justify-center flex-shrink-0 border-3 font-dmsans font-semibold text-2xl"
         style={{ backgroundColor: '#E8C49A', borderColor: '#2E6B5E', color: '#1C2B28' }}
       >
         {initials}
@@ -37,13 +37,16 @@ function Avatar({ photo, initials, name }: { photo: string; initials: string; na
   }
 
   return (
-    <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2" style={{ borderColor: '#D8E6E3' }}>
+    <div
+      className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-full overflow-hidden flex-shrink-0 border-3"
+      style={{ borderColor: '#D8E6E3' }}
+    >
       <Image
         src={photo}
         alt={name}
-        width={80}
-        height={80}
-        className="object-cover w-full h-full"
+        width={180}
+        height={180}
+        className="object-cover object-[center_20%] w-full h-full"
         onError={() => setImgError(true)}
       />
     </div>
@@ -52,7 +55,7 @@ function Avatar({ photo, initials, name }: { photo: string; initials: string; na
 
 export function Founders() {
   return (
-    <section id="about" className="bg-vet-surface py-20 px-6">
+    <section id="about" className="bg-vet-bg py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <p className="font-dmsans font-medium text-xs tracking-widest uppercase text-vet-primary mb-3">
           The founders
@@ -68,18 +71,20 @@ export function Founders() {
           {founders.map((f, i) => (
             <motion.div
               key={f.name}
-              className="bg-vet-bg border border-vet-border rounded-2xl p-8"
+              className="bg-vet-surface border border-vet-border rounded-2xl p-8 flex flex-col sm:flex-row items-start gap-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <Avatar photo={f.photo} initials={f.initials} name={f.name} />
-              <p className="font-dmsans font-semibold text-vet-text mt-4">{f.name}</p>
-              <p className="font-dmsans text-sm text-vet-text mt-3 leading-7">{f.bio}</p>
-              <div className="mt-5">
-                <SocialPill href={f.linkedin} label="LinkedIn" />
+              <div className="flex-1">
+                <p className="font-playfair font-bold text-vet-text text-lg">{f.name}</p>
+                <p className="font-dmsans text-sm text-vet-muted mt-3 leading-7">{f.bio}</p>
+                <div className="mt-5">
+                  <SocialPill href={f.linkedin} label="LinkedIn" />
+                </div>
               </div>
+              <Avatar photo={f.photo} initials={f.initials} name={f.name} />
             </motion.div>
           ))}
         </div>
