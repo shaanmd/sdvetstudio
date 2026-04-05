@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <text
+    x="50%"
+    y="54%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="'IBM Plex Mono', 'SF Mono', 'Courier New', monospace"
+    font-weight="700"
+    font-size="38"
+    fill="#2E6B5E"
+    letter-spacing="-2"
+  >[:]</text>
+</svg>
