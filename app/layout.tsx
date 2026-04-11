@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Playfair_Display, DM_Sans, Outfit } from 'next/font/google'
 import './globals.css'
 
 const playfairDisplay = Playfair_Display({
@@ -14,6 +14,12 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-dm-sans',
+})
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '500', '800'],
+  variable: '--font-outfit',
 })
 
 export const metadata: Metadata = {
@@ -55,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${dmSans.variable}`}
+      className={`${playfairDisplay.variable} ${dmSans.variable} ${outfit.variable}`}
     >
       <head>
         <Script
