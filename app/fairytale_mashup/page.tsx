@@ -74,7 +74,7 @@ export default function FairytaleMLPage() {
           Paste the fairy tale mashup below, hit Train, and watch it learn.
         </p>
 
-        <textarea id="corpus" placeholder={defaultCorpus} />
+        <textarea id="corpus" placeholder="Once Upon A Time ..." />
         <div className="hint">You can edit or replace this text with anything - the more sentences the better!</div>
 
         <button
