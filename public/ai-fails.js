@@ -254,9 +254,3 @@ function _aiFailsInit() {
 window._aiFailsExpand = _aiFailsExpand;
 window._aiFailsCloseOverlay = _aiFailsCloseOverlay;
 window._aiFailsInit = _aiFailsInit;
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', _aiFailsInit);
-} else {
-  _aiFailsInit();
-}
