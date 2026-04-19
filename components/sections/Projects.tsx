@@ -30,7 +30,7 @@ const projects = [
     status: 'beta' as const,
     name: '6-Week Senior Dog Mobility Programme',
     image: '/images/projects/senior-dog.jpg',
-    description: 'Empowering clinics and clients to create a better life for our golden oldies.',
+    description: 'Supporting pet owners in a 6 week online course to help senior dogs move and feel better.',
     url: '',
   },
   {
