@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { StatusBadge } from '@/components/ui/StatusBadge'
 
@@ -7,25 +8,78 @@ const projects = [
   {
     status: 'live' as const,
     name: 'SynAIpseVet',
+    image: '/images/projects/synaipse.jpg',
     description: 'AI education for practising vets. We can show you the ropes so you can make your own stuff, or we can build things for you. We still see furry patients too, so we\u2019ll easily understand what you need.',
     url: 'https://synaipseVet.com',
   },
   {
     status: 'live' as const,
     name: 'Jetpackers AI',
+    image: '/images/projects/jetpackers.jpg',
     description: 'AI literacy for Gen X women who want to make their lives easier and keep up with the latest tech, in non-techie terms. (Why Jetpackers? Because when we were kids they promised the 2000s would bring jetpacks. Can\u2019t see any of those flying about, but we\u2019ve got AI and we\u2019ll make the most of it.)',
     url: 'https://jetpackersai.com',
   },
   {
     status: 'beta' as const,
     name: 'CCL Rehab App',
+    image: '',
     description: '12-week post-cruciate recovery for optimal client support.',
     url: '',
   },
   {
     status: 'beta' as const,
     name: '6-Week Senior Dog Mobility Programme',
+    image: '/images/projects/senior-dog.jpg',
     description: 'Empowering clinics and clients to create a better life for our golden oldies.',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'Vet Scribe',
+    image: '/images/projects/vet-scribe.jpg',
+    description: '',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'Vet Flow',
+    image: '/images/projects/vet-flow.jpg',
+    description: '',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'Vet Route',
+    image: '/images/projects/vet-route.jpg',
+    description: '',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'The Bark Run Project',
+    image: '/images/projects/the-bark-run-project.jpg',
+    description: '',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'Colour My Pony',
+    image: '/images/projects/colour-my-pony.jpg',
+    description: '',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'Behind the Bit',
+    image: '/images/projects/behind the bit.jpg',
+    description: '',
+    url: '',
+  },
+  {
+    status: 'in-progress' as const,
+    name: 'Sooper Dooper Project Prioritizer',
+    image: '/images/projects/sooper-dooper-project-prioritizer.jpg',
+    description: '',
     url: '',
   },
 ]
@@ -48,25 +102,39 @@ export function Projects() {
           {projects.map((p, i) => (
             <motion.div
               key={p.name}
-              className="bg-vet-surface border border-vet-border rounded-2xl p-6 flex flex-col"
+              className="bg-vet-surface border border-vet-border rounded-2xl overflow-hidden flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <StatusBadge status={p.status} />
-              <p className="font-dmsans font-semibold text-vet-text mt-3">{p.name}</p>
-              <p className="font-dmsans text-sm text-vet-muted mt-1 leading-relaxed">{p.description}</p>
-              {p.url && (
-                <a
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-dmsans font-medium text-sm mt-auto pt-4 text-vet-primary hover:underline"
-                >
-                  View site →
-                </a>
+              {p.image && (
+                <div className="relative w-full h-48">
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               )}
+              <div className="p-6 flex flex-col flex-1">
+                <StatusBadge status={p.status} />
+                <p className="font-dmsans font-semibold text-vet-text mt-3">{p.name}</p>
+                {p.description && (
+                  <p className="font-dmsans text-sm text-vet-muted mt-1 leading-relaxed">{p.description}</p>
+                )}
+                {p.url && (
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-dmsans font-medium text-sm mt-auto pt-4 text-vet-primary hover:underline"
+                  >
+                    View site →
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
