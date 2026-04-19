@@ -13,7 +13,7 @@ const slides = [
   { src: '/images/projects/vet-route.jpg', alt: 'Vet Route' },
   { src: '/images/projects/the-bark-run-project.jpg', alt: 'The Bark Run Project' },
   { src: '/images/projects/colour-my-pony.jpg', alt: 'Colour My Pony' },
-  { src: '/images/projects/behind the bit.jpg', alt: 'Behind the Bit' },
+  { src: '/images/projects/behind-the-bit.jpg', alt: 'Behind the Bit' },
   { src: '/images/projects/sooper-dooper-project-prioritizer.jpg', alt: 'Sooper Dooper Project Prioritizer' },
 ]
 

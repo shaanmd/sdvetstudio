@@ -71,7 +71,7 @@ const projects = [
   {
     status: 'in-progress' as const,
     name: 'Behind the Bit',
-    image: '/images/projects/behind the bit.jpg',
+    image: '/images/projects/behind-the-bit.jpg',
     description: '',
     url: '',
   },
