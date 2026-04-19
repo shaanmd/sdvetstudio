@@ -10,7 +10,7 @@ const projects = [
     name: 'SynAIpseVet',
     image: '/images/projects/synaipse.jpg',
     description: 'AI education for practising vets. We can show you the ropes so you can make your own stuff, or we can build things for you. We still see furry patients too, so we\u2019ll easily understand what you need.',
-    url: 'https://synaipseVet.com',
+    url: 'https://synaipse.vet',
   },
   {
     status: 'live' as const,
