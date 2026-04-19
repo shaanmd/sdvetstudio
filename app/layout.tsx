@@ -24,11 +24,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sdvetstudio.com'),
-  title: 'SD VetStudio — Software, apps, and things for screens.',
+  title: 'SD VetStudio: Software, apps, and things for screens.',
   description:
     'Custom AI builds and educational tools. Created by two veterinarians with a focus on functional, no-nonsense design and a fragment of fun.',
   openGraph: {
-    title: 'SD VetStudio — Software, apps, and things for screens.',
+    title: 'SD VetStudio: Software, apps, and things for screens.',
     description:
       'Custom AI builds and educational tools. Created by two veterinarians with a focus on functional, no-nonsense design and a fragment of fun.',
     url: 'https://sdvetstudio.com',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SD VetStudio — Software, apps, and things for screens.',
+    title: 'SD VetStudio: Software, apps, and things for screens.',
     description:
       'Custom AI builds and educational tools. Created by two veterinarians with a focus on functional, no-nonsense design and a fragment of fun.',
   },

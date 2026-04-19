@@ -107,7 +107,7 @@ export function Contact() {
           ) : (
             <div className="text-center py-10 px-4">
               <div className="text-4xl mb-3">✅</div>
-              <p className="font-dmsans font-medium text-white">Got it — we&apos;ll be in touch.</p>
+              <p className="font-dmsans font-medium text-white">Got it. We&apos;ll be in touch.</p>
             </div>
           )}
         </div>

@@ -95,7 +95,7 @@ export default function AITopTipsPage() {
 
         <div className="att-footer-note">
           <div className="att-footer-note-icon">💡</div>
-          <p><strong>The short version:</strong> be specific, check what matters, and remember it&apos;s trying to please you — not necessarily tell you the truth.</p>
+          <p><strong>The short version:</strong> be specific, check what matters, and remember it&apos;s trying to please you. Not necessarily tell you the truth.</p>
         </div>
       </div>
 

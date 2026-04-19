@@ -12,7 +12,7 @@ export function Footer() {
             <a href="#about" className="font-dmsans text-sm transition hover:text-white">About</a>
             <a href="#contact" className="font-dmsans text-sm transition hover:text-white">Contact</a>
             <a
-              href="https://synaipseVet.com"
+              href="https://synaipse.vet"
               target="_blank"
               rel="noopener noreferrer"
               className="font-dmsans text-sm transition hover:text-white"

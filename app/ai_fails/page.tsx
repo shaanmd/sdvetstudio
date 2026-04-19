@@ -80,13 +80,13 @@ export default function AIFailsPage() {
         <div className="af-logo"><em>Jetpackers</em><span>AI</span></div>
         <p className="af-headline">when AI gets it <span>wrong</span></p>
         <p className="af-sub">
-          AI is useful — but it makes mistakes in specific, predictable ways. Knowing what to look for means you catch problems before they cause real damage.
+          AI is useful, but it makes mistakes in specific, predictable ways. Knowing what to look for means you catch problems before they cause real damage.
         </p>
         <p className="af-hint">Click any card to see a real example and what to watch out for</p>
         <div className="af-grid" id="af-grid" />
         <div className="af-footer-note">
           <div className="af-footer-note-icon">💡</div>
-          <p><strong>The golden rule:</strong> AI always sounds confident — even when it&apos;s completely wrong. The way to catch mistakes isn&apos;t to listen harder, it&apos;s to <strong>check what matters</strong>.</p>
+          <p><strong>The golden rule:</strong> AI always sounds confident, even when it&apos;s completely wrong. The way to catch mistakes isn&apos;t to listen harder, it&apos;s to <strong>check what matters</strong>.</p>
         </div>
       </div>
 

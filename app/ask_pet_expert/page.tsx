@@ -91,13 +91,13 @@ export default function AskPetExpertPage() {
       <div className="pet-expert-wrap">
         <h1>Ask the Pet <span>Expert</span> 🐾</h1>
         <p className="subtitle">
-          Meet your AI pet advisor. Ask it anything about your pet — feeding, behaviour, health, training. It&apos;s very confident. Maybe a little <em>too</em> confident&hellip;<br /><br />
+          Meet your AI pet advisor. Ask it anything about your pet: feeding, behaviour, health, training. It&apos;s very confident. Maybe a little <em>too</em> confident&hellip;<br /><br />
           <strong>Your job:</strong> chat naturally, then see if you can spot when something goes wrong.
         </p>
 
         {/* Setup */}
         <div className="setup-box" id="setup-box">
-          <div className="step-label">First — tell us about your pet</div>
+          <div className="step-label">First: tell us about your pet</div>
           <p style={{ fontSize: '13px', color: '#555', lineHeight: '1.6' }}>The AI will remember these details… at least for a while.</p>
           <div className="setup-row">
             <input type="text" id="pet-name" placeholder="Pet's name e.g. Biscuit" maxLength={30} />
@@ -164,7 +164,7 @@ export default function AskPetExpertPage() {
           </p>
           <div id="reveal-content" />
           <p style={{ fontSize: '13px', color: '#555', marginTop: '14px', lineHeight: '1.6' }}>
-            Real AI tools make these same mistakes — sometimes subtly, sometimes obviously. The best thing you can do is stay curious, stay a little sceptical, and always check important facts.
+            Real AI tools make these same mistakes, sometimes subtly, sometimes obviously. The best thing you can do is stay curious, stay a little sceptical, and always check important facts.
           </p>
           <br />
           <span className="reset-link" onClick={() => (window as Window & { _petResetAll?: () => void })._petResetAll?.()}>

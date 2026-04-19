@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const slides = [
-  { src: '/images/projects/synaipse.jpg', alt: 'SynAIpseVet — AI education for vets' },
-  { src: '/images/projects/jetpackers.jpg', alt: 'Jetpackers AI — AI literacy for Gen X women' },
+  { src: '/images/projects/synaipse.jpg', alt: 'SynAIpseVet: AI education for vets' },
+  { src: '/images/projects/jetpackers.jpg', alt: 'Jetpackers AI: AI literacy for Gen X women' },
   { src: '/images/projects/senior-dog.jpg', alt: 'Senior Dog Mobility Programme' },
   { src: '/images/projects/vet-scribe.jpg', alt: 'Vet Scribe' },
   { src: '/images/projects/vet-flow.jpg', alt: 'Vet Flow' },
