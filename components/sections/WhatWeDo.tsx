@@ -5,10 +5,16 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const slides = [
-  { src: '/images/projects/synaipsevet.png', alt: 'SynAIpseVet — AI education for vets' },
-  { src: '/images/projects/jetpackers.png', alt: 'Jetpackers AI — AI literacy for Gen X women' },
-  { src: '/images/projects/ccl-rehab.png', alt: 'CCL Rehab App — post-cruciate recovery' },
-  { src: '/images/projects/senior-dog.png', alt: 'Senior Dog Mobility Programme' },
+  { src: '/images/projects/synaipse.jpg', alt: 'SynAIpseVet — AI education for vets' },
+  { src: '/images/projects/jetpackers.jpg', alt: 'Jetpackers AI — AI literacy for Gen X women' },
+  { src: '/images/projects/senior-dog.jpg', alt: 'Senior Dog Mobility Programme' },
+  { src: '/images/projects/vet-scribe.jpg', alt: 'Vet Scribe' },
+  { src: '/images/projects/vet-flow.jpg', alt: 'Vet Flow' },
+  { src: '/images/projects/vet-route.jpg', alt: 'Vet Route' },
+  { src: '/images/projects/the-bark-run-project.jpg', alt: 'The Bark Run Project' },
+  { src: '/images/projects/colour-my-pony.jpg', alt: 'Colour My Pony' },
+  { src: '/images/projects/behind the bit.jpg', alt: 'Behind the Bit' },
+  { src: '/images/projects/sooper-dooper-project-prioritizer.jpg', alt: 'Sooper Dooper Project Prioritizer' },
 ]
 
 export function WhatWeDo() {
