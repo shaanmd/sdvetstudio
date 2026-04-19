@@ -72,7 +72,7 @@ const projects = [
     status: 'in-progress' as const,
     name: 'Behind the Bit',
     image: '/images/projects/behind-the-bit.jpg',
-    description: 'Equine resources and tools for riders, coaches, and horse owners who want to go deeper.',
+    description: 'Equine bitting resources and tools for riders, vets, and coaches.',
     url: '',
   },
   {
