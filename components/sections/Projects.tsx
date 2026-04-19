@@ -1,8 +1,10 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { StatusBadge } from '@/components/ui/StatusBadge'
+import { InterestModal } from '@/components/ui/InterestModal'
 
 const projects = [
   {
@@ -85,6 +87,8 @@ const projects = [
 ]
 
 export function Projects() {
+  const [activeProject, setActiveProject] = useState<string | null>(null)
+
   return (
     <section id="projects" className="bg-vet-bg py-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -124,21 +128,38 @@ export function Projects() {
                 {p.description && (
                   <p className="font-dmsans text-sm text-vet-muted mt-1 leading-relaxed">{p.description}</p>
                 )}
-                {p.url && (
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-dmsans font-medium text-sm mt-auto pt-4 text-vet-primary hover:underline"
-                  >
-                    View site →
-                  </a>
-                )}
+                <div className="mt-auto pt-4">
+                  {p.url && (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-dmsans font-medium text-sm text-vet-primary hover:underline"
+                    >
+                      View site →
+                    </a>
+                  )}
+                  {(p.status === 'beta' || p.status === 'in-progress') && (
+                    <button
+                      onClick={() => setActiveProject(p.name)}
+                      className="font-dmsans font-medium text-sm text-vet-primary hover:underline block"
+                    >
+                      Interested? →
+                    </button>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {activeProject && (
+        <InterestModal
+          project={activeProject}
+          onClose={() => setActiveProject(null)}
+        />
+      )}
     </section>
   )
 }
