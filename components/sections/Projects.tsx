@@ -44,7 +44,7 @@ const projects = [
     status: 'in-progress' as const,
     name: 'Vet Flow',
     image: '/images/projects/vet-flow.jpg',
-    description: 'Streamlined workflow management for vet practices. Less admin, more time doing the actual vet stuff.',
+    description: 'Streamlined AI powered workflow and knowledge management for vet practices, less admin.',
     url: '',
   },
   {
