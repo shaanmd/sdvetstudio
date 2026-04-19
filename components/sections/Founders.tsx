@@ -10,7 +10,7 @@ const founders = [
     name: 'Dr Shaan Mocke',
     photo: '/shaan.jpg',
     initials: 'SM',
-    bio: 'Shaan was a web designer and teacher of coding in a previous life. Now she\u2019s an avid AI user (as well as a vet!) who can whip up cool apps in a blink.',
+    bio: 'Shaan spent nearly 15 years in tech before becoming a vet: teaching people to code, a decade as a web applications analyst in enterprise and corporate, and building websites along the way. Now she brings all of that to AI.',
     linkedin: 'https://www.linkedin.com/in/shaanmocke/',
   },
   {
