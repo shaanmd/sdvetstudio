@@ -37,49 +37,49 @@ const projects = [
     status: 'in-progress' as const,
     name: 'Vet Scribe',
     image: '/images/projects/vet-scribe.jpg',
-    description: '',
+    description: 'AI-assisted consultation notes so clinicians can focus on the animal in front of them, not the keyboard.',
     url: '',
   },
   {
     status: 'in-progress' as const,
     name: 'Vet Flow',
     image: '/images/projects/vet-flow.jpg',
-    description: '',
+    description: 'Streamlined workflow management for vet practices — less admin, more time doing the actual vet stuff.',
     url: '',
   },
   {
     status: 'in-progress' as const,
     name: 'Vet Route',
     image: '/images/projects/vet-route.jpg',
-    description: '',
+    description: 'Smart scheduling and route planning for mobile and farm vets. Because windshield time is not vet time.',
     url: '',
   },
   {
-    status: 'in-progress' as const,
+    status: 'live' as const,
     name: 'The Bark Run Project',
     image: '/images/projects/the-bark-run-project.jpg',
-    description: '',
-    url: '',
+    description: 'Because dogs deserve a good run and their humans deserve a great community.',
+    url: 'https://thebarkrun.com',
   },
   {
     status: 'in-progress' as const,
     name: 'Colour My Pony',
     image: '/images/projects/colour-my-pony.jpg',
-    description: '',
+    description: 'An interactive colouring tool for horse lovers of all ages — part fun, part educational.',
     url: '',
   },
   {
     status: 'in-progress' as const,
     name: 'Behind the Bit',
     image: '/images/projects/behind-the-bit.jpg',
-    description: '',
+    description: 'Equine resources and tools for riders, coaches, and horse owners who want to go deeper.',
     url: '',
   },
   {
     status: 'in-progress' as const,
     name: 'Sooper Dooper Project Prioritizer',
     image: '/images/projects/sooper-dooper-project-prioritizer.jpg',
-    description: '',
+    description: 'Cut through the noise and work out what to actually do first. Built at an international AI hackathon, March 2026.',
     url: '',
   },
 ]
@@ -109,7 +109,7 @@ export function Projects() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               {p.image && (
-                <div className="relative w-full h-48">
+                <div className="relative w-full h-64">
                   <Image
                     src={p.image}
                     alt={p.name}
